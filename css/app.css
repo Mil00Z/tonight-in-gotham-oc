@@ -202,8 +202,9 @@ p {
 
 /* main styles */
 .content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    /* display: grid;
+    grid-template-columns: 2fr 1fr; */
+    display:flex;
 }
 
 .content section {
@@ -211,9 +212,12 @@ p {
     line-height: 22px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 50px;
-    padding-top: 78px;
-    width: 764px;
+    padding-block:60px;
+    padding-inline:53px;
+    /* width: 764px;*/
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
 }
 
 .content-link {
@@ -228,19 +232,46 @@ p {
 
 /* aside styles */
 .decorative-aside {
-    height: 100%;
-    position: relative;
     width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .decorative-aside.yellow-bg {
     background-color: #FCD530;
+    transition: all .5s ease-in-out;
 }
 
 .decorative-aside-image {
-    left: -100px;
     position: absolute;
-    top: 240px;
+    /* top: 240px; */
+    --op:0;
+    left:90%;
+    opacity:var(--op);
+    top: 600px;
+    transition: all 1s ease-in-out;
+    opacity: var(--op);
+    z-index:88;
+}
+
+.go-bat {
+    animation: batman 2s .75s ease-in-out forwards;
+}
+
+@keyframes batman {
+
+    from {
+        --op:0;
+        left:90%;
+        opacity:var(--op);
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        --op:1;
+        left:-100px;
+        transform: rotateZ(360deg);
+    }
 }
 
 
