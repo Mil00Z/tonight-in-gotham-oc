@@ -243,19 +243,18 @@ p {
 }
 
 .decorative-aside-image {
+    --op:0;
     position: absolute;
     /* top: 240px; */
-    --op:0;
     left:90%;
     opacity:var(--op);
     top: 600px;
-    transition: all 1s ease-in-out;
-    opacity: var(--op);
     z-index:88;
+    transition: all 1s ease-in-out;
 }
 
 .go-bat {
-    animation: batman 2s .75s ease-in-out forwards;
+    animation: batman 2s .5s ease-in-out forwards;
 }
 
 @keyframes batman {
@@ -263,14 +262,15 @@ p {
     from {
         --op:0;
         left:90%;
-        opacity:var(--op);
+        top:600px;
         transform: rotateZ(0deg);
     }
 
     to {
         --op:1;
-        left:-100px;
-        transform: rotateZ(360deg);
+        left:-90px;
+        top:880px;
+        transform: rotateZ(1.95turn);
     }
 }
 
