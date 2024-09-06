@@ -48,3 +48,10 @@ let intersections = new IntersectionObserver((entries) =>{
 
 
 intersections.observe(document.querySelector('.trigger-intersection'),{rootMargin:'20px 20px 20px 20px'});
+
+
+
+document.querySelector('.decorative-aside-image').addEventListener('transitionend', (e) => {
+
+    console.log(e);
+})
